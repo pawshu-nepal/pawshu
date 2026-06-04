@@ -3,880 +3,469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawshu Nepal | Handmade Pet Lifestyle Brand</title>
-    <meta name="description" content="Pawshu Nepal - handmade pet accessories, stationery, portraits, and community collar initiatives from Pokhara.">
-    <link rel="icon" type="image/png" href="Branding/Logo/Paw Shu Logo_Pink.png">
-    <link rel="stylesheet" href="styles.css">
+    <title>Pawshu Nepal | Coming Soon</title>
+    <meta name="description" content="Pawshu Nepal — handmade pet accessories, stationery, portraits, and community collar initiatives. Coming soon from Pokhara, Nepal.">
+
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pawshu Nepal | Coming Soon">
+    <meta property="og:description" content="Something beautiful is being crafted for pets and their humans. Handmade in Pokhara, Nepal.">
+    <meta property="og:image" content="icon-512.png">
+    <meta property="og:site_name" content="Pawshu Nepal">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pawshu Nepal",
+      "url": "https://pawshunepal.com",
+      "logo": "https://pawshunepal.com/icon-512.png",
+      "description": "Handmade pet accessories, stationery, portraits, and community collar initiatives from Pokhara, Nepal."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink: #F170A6;
+            --pink-soft: #FFF2F6;
+            --pink-accent: #FFCEDF;
+            --blue: #3F58A3;
+            --blue-soft: #F0F4FF;
+            --blue-accent: #C7D4FF;
+            --dark: #1A1A2E;
+            --text-body: #495478;
+            --paper: #FAF8F6;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: "Plus Jakarta Sans", Arial, sans-serif;
+            background: var(--paper);
+            color: var(--dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Full-page layout */
+        .coming-soon-page {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, var(--blue-soft) 0%, var(--pink-soft) 40%, var(--paper) 100%);
+            overflow: hidden;
+        }
+
+        /* Animated background blobs */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            animation: blob-float 12s ease-in-out infinite alternate;
+        }
+
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--pink-accent);
+            top: -15%;
+            left: -10%;
+            animation-duration: 14s;
+        }
+
+        .blob-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--blue-accent);
+            bottom: -10%;
+            right: -8%;
+            animation-duration: 11s;
+            animation-direction: alternate-reverse;
+        }
+
+        .blob-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--pink-soft);
+            top: 50%;
+            left: 60%;
+            animation-duration: 16s;
+        }
+
+        @keyframes blob-float {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -25px) scale(1.05); }
+            66% { transform: translate(-20px, 15px) scale(0.95); }
+            100% { transform: translate(15px, -10px) scale(1.02); }
+        }
+
+        /* Floating illustration accents */
+        .floating-art {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.12;
+            z-index: 1;
+        }
+
+        .floating-art img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 8px 20px rgba(63, 88, 163, 0.1));
+        }
+
+        .art-1 {
+            width: clamp(100px, 15vw, 180px);
+            top: 8%;
+            left: 5%;
+            animation: art-drift-1 10s ease-in-out infinite;
+        }
+
+        .art-2 {
+            width: clamp(90px, 12vw, 150px);
+            bottom: 10%;
+            right: 6%;
+            animation: art-drift-2 12s ease-in-out infinite;
+        }
+
+        .art-3 {
+            width: clamp(80px, 10vw, 130px);
+            top: 15%;
+            right: 10%;
+            animation: art-drift-3 11s ease-in-out infinite;
+        }
+
+        .art-4 {
+            width: clamp(90px, 11vw, 140px);
+            bottom: 15%;
+            left: 8%;
+            animation: art-drift-2 13s ease-in-out infinite alternate;
+        }
+
+        @keyframes art-drift-1 {
+            0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+            50% { transform: translate(-12px, -18px) rotate(3deg); }
+        }
+
+        @keyframes art-drift-2 {
+            0%, 100% { transform: translate(0, 0) rotate(2deg); }
+            50% { transform: translate(15px, -10px) rotate(-4deg); }
+        }
+
+        @keyframes art-drift-3 {
+            0%, 100% { transform: translate(0, 0) rotate(-2deg); }
+            50% { transform: translate(-8px, 14px) rotate(5deg); }
+        }
+
+        /* Paw pattern overlay */
+        .paw-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: url('Branding/Pattern/Pink Paw.png');
+            background-size: 120px;
+            background-repeat: repeat;
+            opacity: 0.03;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Content card */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            padding: 0 24px;
+            animation: fade-up 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo badge */
+        .logo-badge {
+            width: clamp(140px, 22vw, 200px);
+            height: clamp(140px, 22vw, 200px);
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(14px, 2vw, 24px);
+            box-shadow:
+                0 8px 0 var(--pink),
+                0 16px 40px rgba(63, 88, 163, 0.12);
+            border: 3px solid var(--white);
+            margin-bottom: 36px;
+            animation: badge-bounce 1s 0.3s cubic-bezier(0.25, 1, 0.5, 1) both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-badge:hover {
+            transform: translateY(-4px) rotate(3deg);
+            box-shadow:
+                0 4px 0 var(--pink),
+                0 12px 28px rgba(63, 88, 163, 0.18);
+        }
+
+        @keyframes badge-bounce {
+            from {
+                opacity: 0;
+                transform: translateY(-40px) scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .logo-badge img {
+            max-width: 88%;
+            max-height: 88%;
+            object-fit: contain;
+        }
+
+        /* Section label */
+        .label {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--pink);
+            margin-bottom: 16px;
+            display: inline-block;
+            animation: fade-up 1s 0.5s cubic-bezier(0.25, 1, 0.5, 1) both;
+        }
+
+        /* Headline */
+        h1 {
+            font-family: "DM Serif Display", Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(40px, 7vw, 68px);
+            line-height: 1.1;
+            color: var(--blue);
+            margin-bottom: 20px;
+            animation: fade-up 1s 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+        }
+
+        h1 span {
+            color: var(--pink);
+        }
+
+        /* Description */
+        .description {
+            font-size: clamp(15px, 2.5vw, 18px);
+            line-height: 1.65;
+            color: var(--text-body);
+            max-width: 480px;
+            margin-bottom: 40px;
+            animation: fade-up 1s 0.75s cubic-bezier(0.25, 1, 0.5, 1) both;
+        }
+
+        /* Social row */
+        .social-row {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            animation: fade-up 1s 0.9s cubic-bezier(0.25, 1, 0.5, 1) both;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 1.5px solid var(--blue-accent);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--pink);
+            border-color: var(--pink);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 10px 24px rgba(241, 112, 166, 0.3);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--blue);
+            stroke-width: 2;
+            fill: none;
+            transition: stroke 0.3s ease;
+        }
+
+        .social-link:hover svg {
+            stroke: var(--white);
+        }
+
+        /* Decorative divider dots */
+        .dot-divider {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 28px;
+            animation: fade-up 1s 0.65s cubic-bezier(0.25, 1, 0.5, 1) both;
+        }
+
+        .dot-divider span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--pink-accent);
+        }
+
+        .dot-divider span:nth-child(2) {
+            background: var(--pink);
+            width: 24px;
+            border-radius: 10px;
+        }
+
+        .dot-divider span:nth-child(3) {
+            background: var(--blue-accent);
+        }
+
+        /* Footer whisper */
+        .footer-whisper {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--text-body);
+            opacity: 0.5;
+            animation: fade-up 1s 1.1s cubic-bezier(0.25, 1, 0.5, 1) both;
+        }
+
+        .footer-whisper span {
+            color: var(--pink);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .floating-art { opacity: 0.08; }
+            .blob { filter: blur(60px); opacity: 0.25; }
+            .blob-1 { width: 300px; height: 300px; }
+            .blob-2 { width: 250px; height: 250px; }
+            .blob-3 { width: 200px; height: 200px; }
+        }
+
+        @media (max-width: 480px) {
+            .art-3, .art-4 { display: none; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Sticky Navigation Bar -->
-    <header class="site-nav">
-        <a href="#home" class="nav-logo">
-            <img src="Branding/Logo/Paw Shu Logo_Pink.png" alt="Pawshu Logo">
-        </a>
-        <nav aria-label="Main navigation">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#story" class="nav-link">Our Story</a>
-            <a href="#initiative" class="nav-link">Initiative</a>
-            <a href="#shop" class="nav-link">Shop</a>
-            <a href="#illustrations" class="nav-link">Illustrations</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-    </header>
+    <main class="coming-soon-page">
+        <!-- Animated background blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-wrapper" id="home">
-            <!-- Floating hand-drawn illustrations -->
-            <div class="floating-illustration slot-1 float-slow-1">
-                <img src="Art_Folder/V1/flower cat. noL.png" alt="Flower Cat Hand-drawn Art">
-            </div>
-            <div class="floating-illustration slot-2 float-slow-2">
-                <img src="Art_Folder/V1/golden retriver.png" alt="Golden Retriever Hand-drawn Art">
-            </div>
-            <div class="floating-illustration slot-3 float-slow-3">
-                <img src="Art_Folder/V1/Husky w L.png" alt="Husky Hand-drawn Art">
-            </div>
-            <div class="floating-illustration slot-4 float-slow-4">
-                <img src="Art_Folder/V1/bobo wL.png" alt="Bobo Hand-drawn Art">
-            </div>
-            <div class="floating-illustration slot-5 float-slow-5">
-                <img src="Art_Folder/V1/tabby cat.png" alt="Tabby Cat Hand-drawn Art">
-            </div>
-            <div class="floating-illustration slot-6 float-slow-6">
-                <img src="Art_Folder/V1/Reflective_Dog_Collar.png" alt="Reflective Dog Collar Art">
-            </div>
-            <div class="floating-illustration slot-7 float-slow-4">
-                <img src="Art_Folder/V1/alaska white with lines .png" alt="Alaska White Hand-drawn Art">
-            </div>
-            <div class="floating-illustration slot-8 float-slow-5">
-                <img src="Art_Folder/V1/Scarf.png" alt="Scarf Pet Hand-drawn Art">
-            </div>
+        <!-- Paw pattern overlay -->
+        <div class="paw-pattern"></div>
 
-            <!-- Centered Copy & Brand Badge -->
-            <div class="hero-content">
-                <div class="hero-logo-badge">
-                    <img src="Branding/Logo/Paw Shu Logo_Pink.png" alt="Pawshu Badge Logo">
-                </div>
-                <h1>Made for <span>Happy Paws</span></h1>
-                <p>Stylish, comfortable, and locally made pet accessories in Pokhara, Nepal. Handcrafted goods made with care for pets and the people who love them.</p>
-                <div class="btn-group">
-                    <a href="#shop" class="btn btn-primary">Shop Collections</a>
-                    <a href="#initiative" class="btn btn-secondary">Learn Our Cause</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Story Section -->
-        <section class="section has-pattern has-pattern-pink" id="story">
-            <div class="section-content story-grid">
-                <div class="story-copy animate-on-scroll">
-                    <span class="section-label">Our Story</span>
-                    <h2>The Pawshu Beginning</h2>
-                    <p>Pawshu is born from the Nepali word <strong>"पशु (Pashu)"</strong>, which means animal. It is a word deeply rooted in care, companionship, and everyday life in Nepal.</p>
-                    <p>Our journey officially launched during Kukur Tihar 2025 — Nepal’s beautiful annual celebration honoring the love and loyalty of dogs. As our very first project, we introduced the <strong class="highlight-pink">Reflective Collar Initiative</strong>, distributing custom-made glow-in-the-dark safety collars to street dogs across Pokhara. By making these animals visible to drivers on dark roads, our goal was to help prevent avoidable traffic accidents and keep them safe at night.</p>
-                    <div class="story-motto-callout">
-                        "One collar can't change the world, but it can save a life."
-                    </div>
-                    <p>What started out of pure affection for the wagging tails, soft paws, and joyful moments that make our lives brighter has grown into a collaborative design workshop in Pokhara. Today, we create handcrafted accessories that celebrate the beautiful bond between pets and their humans.</p>
-                </div>
-                <div class="story-visual animate-on-scroll delay-1">
-                    <div class="story-frame">
-                        <img src="Pawshu_Pet_Pictures/Red Crochet.png" alt="Happy dog wearing a handmade red crochet collar from Pawshu">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Meet The Pack Section -->
-        <section class="section section-bg-blue" id="pack">
-            <div class="section-content team-section-container">
-                <!-- Left Column -->
-                <div class="team-column team-column-left animate-on-scroll">
-                    <div class="pack-card cutout-card stagger-1">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Suruchi.TM.png" alt="Suruchi">
-                        </div>
-                        <h3>Suruchi</h3>
-                    </div>
-                    <div class="pack-card cutout-card stagger-2">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Kripa.png" alt="Kripa">
-                        </div>
-                        <h3>Kripa</h3>
-                    </div>
-                    <div class="pack-card cutout-card stagger-3">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Pranil.png" alt="Pranil">
-                        </div>
-                        <h3>Pranil</h3>
-                    </div>
-                    <div class="pack-card cutout-card stagger-4">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Suruchi. P.png" alt="Suruchi">
-                        </div>
-                        <h3>Suruchi</h3>
-                    </div>
-                </div>
-
-                <!-- Center Column -->
-                <div class="team-column team-column-center animate-on-scroll">
-                    <span class="section-label">Our Team</span>
-                    <h2>Meet the Pack</h2>
-                    <p class="team-pitch">We're a creative team from Pokhara, Nepal, doing a little bit of everything behind Pashu—designing, painting, sketching, filming, editing, stitching, photographing, packing orders, and occasionally running on coffee and last-minute ideas.</p>
-                    <p class="team-pitch">Made up of young multidisciplinary artists and creators, Pawshu is built with a lot of love, collaboration, and handmade chaos. Most of our work is created in-house, blending art, craftsmanship, and storytelling into pieces made for pets and their humans.</p>
-                </div>
-
-                <!-- Right Column -->
-                <div class="team-column team-column-right animate-on-scroll">
-                    <div class="pack-card cutout-card stagger-1">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Amishan.png" alt="Amishan">
-                        </div>
-                        <h3>Amishan</h3>
-                    </div>
-                    <div class="pack-card cutout-card stagger-2">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Binit.png" alt="Binit">
-                        </div>
-                        <h3>Binit</h3>
-                    </div>
-                    <div class="pack-card cutout-card stagger-3">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Bisaj.png" alt="Bisaj">
-                        </div>
-                        <h3>Bisaj</h3>
-                    </div>
-                    <div class="pack-card cutout-card stagger-4">
-                        <div class="pack-card-img-wrapper cutout-wrapper">
-                            <img src="Team Member/Nikhil.png" alt="Nikhil">
-                        </div>
-                        <h3>Nikhil</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reflective Collar Initiative Section -->
-        <section class="section has-pattern has-pattern-blue" id="initiative">
-            <div class="section-content">
-                <div class="collar-grid">
-                    <div class="collar-copy animate-on-scroll">
-                        <span class="section-label">Glow in the Dark Safety</span>
-                        <h2><em>Reflective Collar Initiative</em></h2>
-                        <p>Pawshu began distributing reflective collars to street dogs across Pokhara with one simple goal — <strong class="highlight-pink">visibility</strong>. These <strong class="highlight-pink">glow-in-the-dark</strong> collars help street dogs stay seen at night, especially on darker roads where accidents happen far too often.</p>
-                        <p>What surprised us most wasn't just the response from the community, but the chain reaction that followed. After our first distribution video, more people reached out wanting to contribute. One donation inspired another, and what began with a single anonymous donor slowly turned into a growing community effort.</p>
-                        <p>Today, we continue walking through different areas of Pokhara, distributing collars one street dog at a time — believing that even the smallest act of care can make a difference in <strong class="highlight-blue">road safety</strong>.</p>
-                        
-                        <h4 style="margin-top: 28px; color: var(--blue);">Areas Reached In Pokhara:</h4>
-                        <div class="location-tags">
-                            <span>Lakeside</span>
-                            <span>Bagar</span>
-                            <span>Lekhnath</span>
-                            <span>Ram Bazaar</span>
-                            <span>Sedi Village</span>
-                            <span>Archalbot</span>
-                            <span>Foot Track</span>
-                            <span>Damside</span>
-                            <span>Deep</span>
-                        </div>
-                    </div>
-                    <div class="collar-showcase animate-on-scroll">
-                        <img src="Product Catalouge/Pet Acessories/reflective collar.png" alt="Reflective safety collar">
-                        <div class="streets-stat-card" style="width: 100%; max-width: 380px; margin: 0 auto;">
-                            <div class="stat-desc" style="margin-bottom: 8px;">Distributed Reflective Collars To</div>
-                            <div class="stat-number" style="font-size: clamp(54px, 8vw, 80px);"><span class="counter-streets" data-target="170">0</span>+</div>
-                            <div class="stat-desc" style="margin-top: 8px;">Street Dogs</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reflective Collar Journey Strip -->
-                <div class="event-photos-grid animate-on-scroll">
-                    <div class="event-photo-wrapper">
-                        <img src="Reflective_Collar/IMG_9128.JPG" alt="Street dog with reflective collar">
-                    </div>
-                    <div class="event-photo-wrapper">
-                        <img src="Reflective_Collar/IMG_1260.jpg" alt="Street dog with reflective collar at night">
-                    </div>
-                    <div class="event-photo-wrapper">
-                        <img src="Reflective_Collar/IMG_0430.JPG" alt="Street dog with collar close up">
-                    </div>
-                    <div class="event-photo-wrapper">
-                        <img src="Reflective_Collar/IMG_0425.JPG" alt="Street dog with collar">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pawshu On The Streets Section -->
-        <section class="section section-bg-pink has-pattern has-pattern-pink" id="streets">
-            <div class="section-content">
-                <div class="section-header animate-on-scroll">
-                    <span class="section-label">Community Pop-ups</span>
-                    <h2>Pawshu on the Streets</h2>
-                    <p>Over the past six months, Pawshu has connected with pet lovers face-to-face in local pop-up markets, community spaces, and public events across Pokhara.</p>
-                </div>
-                
-                <div class="event-photos-grid animate-on-scroll">
-                    <div class="event-photo-wrapper">
-                        <img src="Pawshu_Popups/IMG_5960.JPG" alt="Pawshu pop-up setup">
-                    </div>
-                    <div class="event-photo-wrapper">
-                        <img src="Pawshu_Popups/IMG_6520 2.JPG" alt="Pawshu setup">
-                    </div>
-                    <div class="event-photo-wrapper">
-                        <img src="Pawshu_Popups/IMG_8944 2.JPG" alt="Pawshu community stall">
-                    </div>
-                    <div class="event-photo-wrapper">
-                        <img src="Humans_of_Pawshu/carasoul 1. 14.9.2025.png" alt="Pawshu popup market">
-                    </div>
-                </div>
-
-                <div class="streets-stats-row animate-on-scroll">
-                    <div class="streets-stat-card">
-                        <div class="stat-number"><span class="counter-streets" data-target="10">0</span>+</div>
-                        <div class="stat-desc">Pop-Up Markets Attended</div>
-                    </div>
-                    <div class="streets-stat-card">
-                        <div class="stat-number"><span class="counter-streets" data-target="5000">0</span>+</div>
-                        <div class="stat-desc">People Reached Through On-Ground Events</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tabbed Shop Section -->
-        <section class="section" id="shop">
-            <div class="section-content">
-                <div class="section-header animate-on-scroll">
-                    <span class="section-label">Shop</span>
-                    <h2>Handmade in Nepal</h2>
-                    <p>Created with care for pets and the people who love them. Explore our premium collections of accessories, stationery, and crochet pieces, thoughtfully crafted with loops of love in Pokhara.</p>
-                </div>
-
-                <!-- Tab Navigation -->
-                <div class="shop-tabs-nav animate-on-scroll">
-                    <button class="tab-btn active" data-tab="accessories">Pet Accessories</button>
-                    <button class="tab-btn" data-tab="stationery">Stationery</button>
-                    <button class="tab-btn" data-tab="crochet">Crochet Creations</button>
-                </div>
-
-                <!-- Tab Panels -->
-                <!-- 1. Pet Accessories -->
-                <div class="tab-panel active" id="accessories">
-                    <article class="product-card animate-on-scroll stagger-1">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pet Acessories/Dhaka.png" alt="Dhaka Bandana">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Dhaka Bandana</h4>
-                        </div>
-                    </article>
-                    <article class="product-card animate-on-scroll stagger-2">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pet Acessories/Yellow Chochet.png" alt="Gold Crochet Bandana">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Gold Crochet Bandana</h4>
-                        </div>
-                    </article>
-                    <article class="product-card animate-on-scroll stagger-3">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pet Acessories/reflective collar.png" alt="Reflective Collar">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Reflective Collar</h4>
-                        </div>
-                    </article>
-                    <article class="product-card animate-on-scroll stagger-4">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pet Acessories/Blue Gingam.png" alt="Blue Gingham Bandana">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Blue Gingham Bandana</h4>
-                        </div>
-                    </article>
-                    <article class="product-card animate-on-scroll stagger-5">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pet Acessories/Denim Red Check.png" alt="Denim Red Check Bandana">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Denim Red Check Bandana</h4>
-                        </div>
-                    </article>
-                    <article class="product-card animate-on-scroll stagger-1">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pet Acessories/scarf. blue n whitepng.png" alt="Blue and White Scarf">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Blue & White Pet Scarf</h4>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- 2. Stationery -->
-                <div class="tab-panel" id="stationery">
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Calender Bookmark2026.png" alt="Calendar Bookmark">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Calendar Bookmark 2026</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/v2 sticker.png" alt="Pet sticker prints">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pet Sticker Prints - Ed 1</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/v2 sticker phone mc.png" alt="Sticker phone mockup">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pet Sticker Set - Ed 2</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Poscard Dog Edition.png" alt="Dog edition postcard">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Postcard Dog Edition</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Bookmark 1.png" alt="White Terrier Bookmark">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>White Terrier Bookmark</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Bookmark 2.png" alt="Husky Bookmark">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Husky Bookmark</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Bookmark 3.png" alt="Pomchi Bookmark">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pomchi Bookmark</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Bookmark 4.png" alt="Golden Retriever Bookmark">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Golden Retriever Bookmark</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/Colouring Book.png" alt="Colouring book mockup">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Colouring Book</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/mero maya.png" alt="Mero Maya greeting card">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Mero Maya Card</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/happy birthday.png" alt="Happy Birthday greeting card">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Happy Birthday Card</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Stationery_Mockups/get well soon.png" alt="Get Well Soon card">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Get Well Soon Card</h4>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- 3. Crochet -->
-                <div class="tab-panel" id="crochet">
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/1.png" alt="Ladies of the Farm">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Ladies of the Farm</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/2.png" alt="Ladies of the Farm Red">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Ladies of the Farm (Red)</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/3.png" alt="Ladies of the Farm Yellow">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Ladies of the Farm (Yellow)</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/4.png" alt="Boss Babe">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Boss Babe</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/5.png" alt="Princess of the Sea">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Princess of the Sea</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/6.png" alt="Pawshu Crochet Doll">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pawshu Crochet Doll</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/7.png" alt="Classic Pawshu Doll">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Classic Pawshu Doll</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/8.png" alt="Stuffed Toy Doll">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Stuffed Toy Doll</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/9.png" alt="Crochet Wrist Bag grey">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Crochet Wrist Bag (Grey)</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/10.png" alt="Crochet Wrist Bag tan">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Crochet Wrist Bag (Tan)</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/11.png" alt="Crochet Wrist Bag black">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Crochet Wrist Bag (Black)</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/12.png" alt="Dr Strange Crochet Doll">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Dr Strange Crochet Doll</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/13.png" alt="Heart Shape Coaster">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Heart Shape Coaster</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/14.png" alt="Bear Shape Coaster">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Bear Shape Coaster</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/15.png" alt="Pawshu Tote Bag">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pawshu Tote Bag</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/16.png" alt="Pawshu Doll Bag">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pawshu Doll Bag</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/17.png" alt="Pastel Flower Coaster">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Pastel Flower Coaster</h4>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-card-img-container">
-                            <img src="Product Catalouge/Pawshu_Crochet/18.png" alt="Custom Family Crochet Doll">
-                        </div>
-                        <div class="product-card-details">
-                            <h4>Custom Family Crochet Doll</h4>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Illustrations Section -->
-        <section class="section section-bg-blue" id="illustrations">
-            <div class="section-content">
-                <div class="section-header animate-on-scroll">
-                    <span class="section-label">Gallery</span>
-                    <h2>Artwork & Portraits</h2>
-                    <p>A blend of hand-drawn sketches and digital illustrations designed in collaboration with young Nepali artists, including custom-commissioned pet portraits.</p>
-                </div>
-                <div class="illustrations-grid">
-                    <!-- V1 Artwork -->
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/flower cat. noL.png" alt="Flower Cat">
-                        </div>
-                        <h4>Flower Cat</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/golden retriver.png" alt="Golden Retriever">
-                        </div>
-                        <h4>Golden Retriever</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Husky w L.png" alt="Husky">
-                        </div>
-                        <h4>Husky</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/bobo wL.png" alt="Bobo">
-                        </div>
-                        <h4>Bobo</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/tabby cat.png" alt="Tabby Cat">
-                        </div>
-                        <h4>Tabby Cat</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/alaska white with lines .png" alt="Alaska White">
-                        </div>
-                        <h4>Alaska White</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Reflective_Dog_Collar.png" alt="Reflective Dog">
-                        </div>
-                        <h4>Reflective Dog</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Scarf.png" alt="Scarf Pet Art">
-                        </div>
-                        <h4>Scarf Pet Art</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Tote bag design.png" alt="Tote Bag Art">
-                        </div>
-                        <h4>Tote Bag Art</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/pawshu bandana.png" alt="Bandana Art">
-                        </div>
-                        <h4>Bandana Art</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Scrunchie Artwork.png" alt="Scrunchie Art">
-                        </div>
-                        <h4>Scrunchie Art</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Bandana Artwork_.png" alt="Bandana Sketch">
-                        </div>
-                        <h4>Bandana Sketch</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/denim chew toy.png" alt="Denim Chew Toy Art">
-                        </div>
-                        <h4>Denim Chew Toy Art</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Untitled_Artwork 38.png" alt="Dog Art V1">
-                        </div>
-                        <h4>Dog Art V1</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Untitled_Artwork 37.png" alt="Dog Art V2">
-                        </div>
-                        <h4>Dog Art V2</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Untitled_Artwork 26.png" alt="Cat Art V1">
-                        </div>
-                        <h4>Cat Art V1</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Untitled_Artwork 45.png" alt="Cat Art V2">
-                        </div>
-                        <h4>Cat Art V2</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/IMG_0977.PNG" alt="Cute Pups Sketch">
-                        </div>
-                        <h4>Cute Pups Sketch</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/IMG_0978.PNG" alt="Sweet Cats Sketch">
-                        </div>
-                        <h4>Sweet Cats Sketch</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V1/Paw shu card.png" alt="Pawshu Greeting Card">
-                        </div>
-                        <h4>Greeting Card Art</h4>
-                    </article>
-
-                    <!-- V2 Artwork -->
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/1 .png" alt="Custom Portrait 1">
-                        </div>
-                        <h4>Custom Portrait 1</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/2.png" alt="Custom Portrait 2">
-                        </div>
-                        <h4>Custom Portrait 2</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/3.png" alt="Custom Portrait 3">
-                        </div>
-                        <h4>Custom Portrait 3</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/4.png" alt="Floral Pet Portrait">
-                        </div>
-                        <h4>Floral Pet Portrait</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/5.png" alt="Cozy Pet & Human">
-                        </div>
-                        <h4>Cozy Pet & Human</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/6.png" alt="Happy Puppy Portrait">
-                        </div>
-                        <h4>Happy Puppy Portrait</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/7.png" alt="Cat & Dog Family">
-                        </div>
-                        <h4>Cat & Dog Family</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/8.png" alt="Digital Keepsake">
-                        </div>
-                        <h4>Digital Keepsake</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 35.png" alt="Pet Portrait 4">
-                        </div>
-                        <h4>Pet Portrait 4</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 36.png" alt="Pet Portrait 5">
-                        </div>
-                        <h4>Pet Portrait 5</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 40.png" alt="Pet Sketch 1">
-                        </div>
-                        <h4>Pet Sketch 1</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-2">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 41.png" alt="Pet Sketch 2">
-                        </div>
-                        <h4>Pet Sketch 2</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-3">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 42.png" alt="Pet Sketch 3">
-                        </div>
-                        <h4>Pet Sketch 3</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-4">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 43.png" alt="Pet Sketch 4">
-                        </div>
-                        <h4>Pet Sketch 4</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-5">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 44.png" alt="Pet Sketch 5">
-                        </div>
-                        <h4>Pet Sketch 5</h4>
-                    </article>
-                    <article class="illustration-card animate-on-scroll stagger-1">
-                        <div class="illustration-card-img-wrapper">
-                            <img src="Art_Folder/V2/Untitled_Artwork 46.png" alt="Pet Sketch 6">
-                        </div>
-                        <h4>Pet Sketch 6</h4>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Us & Map Section -->
-        <section class="section" id="contact">
-            <div class="section-content contact-grid">
-                <div class="contact-card animate-on-scroll">
-                    <h2>Contact Us</h2>
-                    <p>Have a question or want to order a custom portrait? Drop us a message!</p>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="form-name">Your Name</label>
-                            <input type="text" id="form-name" class="form-control" placeholder="Enter your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-email">Email Address</label>
-                            <input type="email" id="form-email" class="form-control" placeholder="Enter your email address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-message">Your Message</label>
-                            <textarea id="form-message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-                <div class="map-container-wrapper animate-on-scroll">
-                    <div class="map-card">
-                        <h2>Our Location</h2>
-                        <p>Sedi Village, Pokhara, Nepal</p>
-                        <div class="map-frame-wrapper">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14071.189578135894!2d83.94720970678622!3d28.228588825126135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959524ffea51b7%3A0x6e9f196eb00c874!2sSedi%2C%20Pokhara%2033700!5e0!3m2!1sen!2snp!4v1717380000000!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <img src="Branding/Logo/Paw Shu Logo_w. White.png" alt="Pawshu Logo" class="footer-logo">
-            
-            <div class="footer-social">
-                <a href="https://instagram.com/pawshu.nepal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-                <a href="https://tiktok.com/@pawshu.nepal" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                    </svg>
-                </a>
-                <a href="mailto:pawshu.nepal@gmail.com" aria-label="Email">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                </a>
-            </div>
-
-            <a href="https://instagram.com/pawshu.nepal" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; stroke: currentColor;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                @pawshu.nepal
-            </a>
-            <a href="mailto:pawshu.nepal@gmail.com" style="display: inline-flex; align-items: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; stroke: currentColor;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                pawshu.nepal@gmail.com
-            </a>
-            <p>Sedi Village, Pokhara, Nepal</p>
-            <p style="margin-top: 10px; font-size: 12px; opacity: 0.5;">&copy; 2026 Pawshu Nepal. Made with love for happy paws.</p>
+        <!-- Floating illustration accents -->
+        <div class="floating-art art-1">
+            <img src="Art_Folder/V1/flower cat. noL.png" alt="">
         </div>
-    </footer>
+        <div class="floating-art art-2">
+            <img src="Art_Folder/V1/golden retriver.png" alt="">
+        </div>
+        <div class="floating-art art-3">
+            <img src="Art_Folder/V1/tabby cat.png" alt="">
+        </div>
+        <div class="floating-art art-4">
+            <img src="Art_Folder/V1/bobo wL.png" alt="">
+        </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged view">
-    </div>
+        <!-- Main content -->
+        <div class="content-wrapper">
+            <div class="logo-badge">
+                <img src="Branding/Logo/Paw Shu Logo_Pink.png" alt="Pawshu Nepal Logo">
+            </div>
 
-    <script src="app.js"></script>
+            <span class="label">Handmade in Pokhara, Nepal</span>
+
+            <h1>Something <span>Pawsome</span> is Coming</h1>
+
+            <div class="dot-divider">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <p class="description">
+                We're crafting something special for pets and the people who love them. Handmade accessories, art, and a whole lot of love — stay tuned.
+            </p>
+
+            <!-- Social links -->
+            <div class="social-row">
+                <a href="https://www.instagram.com/pawshunepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <circle cx="12" cy="12" r="5"/>
+                        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/pawshunepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@pawshunepal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-whisper">
+            Made with <span>♥</span> by the Pawshu Pack
+        </div>
+    </main>
 </body>
 </html>
